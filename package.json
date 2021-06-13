@@ -1,22 +1,13 @@
 {
-  "name": "BotHamood",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ezores/BotHamood.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ezores/BotHamood/issues"
-  },
-  "homepage": "https://github.com/ezores/BotHamood#readme",
+  "name": "corbaci",
+  "version": "0.0.1",
   "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "author": "Hamody",
+  "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3"
   }
