@@ -5,9 +5,9 @@ const addReactions = (message, reactions) => {
     setTimeout(() => addReactions(message, reactions), 750)
   }
 }
-module.exports = async (client, id, text, reactions = []) = {
+module.exports = async (client, id, text, reactions = []) => {
   const channel = await client.channels.fetch(id)
-  // ("Burda const channelda hata var")
+  
 
 channel.messages.fetch().then((messages) => {
   if (message.size === 0) {

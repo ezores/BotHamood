@@ -6,13 +6,42 @@ const firstMessage = require ('./first-message')
 
 const command = require('./command')
 
+  command(client, 'createtextchannel', (message) => {
+    const name = message.content.replace('!createtextchannel', '')
+
+    message.guild.channels.create(name, {
+      type: 'text'
+    })
+    .then(channel => {
+      console.log(channel)
+      const categoryId = '724607624640987159'
+      channel.setParent(categoryId)
+      //general category idsi textchannel icin
+    })
+  })
+
+  command(client, 'createvoicechannel', (message) => {
+    const name = message.content.replace('!createvoicechannel', '') 
+
+    message.guild.channels.create(name, {
+      type: 'voice'
+    })
+    .then((channel) => {
+      const categoryId = '724607624640987159'
+      channel.setParent(categoryId)
+      //general category idsi voicechannel icin
+      
+    })
+    
+  })
+
 client.on('ready', () => {
 	console.log('Bot suan aktif!');
 
   firstMessage(client, '788478647450992741', 'hello world', ['🔥'] )
 
-  command(client,['ping', 'test'], message => {
-    message.channel.send('pong!')
+  command(client,['!sa'], message => {
+    message.channel.send('as')
   })
 
   command(client, 'server', message => {
