@@ -6,6 +6,17 @@ const firstMessage = require ('./first-message')
 
 const command = require('./command')
 
+command (client, 'embed', (message) => {
+  console.log(message.author)
+
+  const embed = new Discord.MessageEmbed()
+  .setTitle('Cliack for embed')
+  .setURL('https://discord.gg/7rwn6rhZ')
+  .setAuthor(message.author.username)
+
+  message.channel.send(embed)
+})
+
   command(client, 'createtextchannel', (message) => {
     const name = message.content.replace('!createtextchannel', '')
 
